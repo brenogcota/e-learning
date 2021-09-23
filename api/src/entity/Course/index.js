@@ -1,8 +1,8 @@
 const { EntitySchema } = require('typeorm');
 
 const CourseEntity = new EntitySchema({
-    name: "Course", 
-    tableName: "Course",
+    name: "Course",
+    tableName: "course",
     columns: {
         id: {
             primary: true,

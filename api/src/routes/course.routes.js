@@ -3,6 +3,6 @@ const CourseService = require('../services/Course');
 
 const route = express.Router();
 
-route.get('/:name', CourseService.index);
+route.get('/:course', CourseService.index);
 
 module.exports = route;

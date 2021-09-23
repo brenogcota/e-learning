@@ -6,7 +6,7 @@ const Course = require('../../entity/Course');
 
 typeorm.createConnection({
     ...dbConfig,
-    synchronize: true,
+    synchronize: false,
     entities: [
         User,
         Position,

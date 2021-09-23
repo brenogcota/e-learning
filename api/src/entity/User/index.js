@@ -11,13 +11,10 @@ const UserEntity = new EntitySchema({
         name: {
             type: "varchar"
         },
-        ocuppation: {
+        occupation: {
             type: 'varchar'
         },
         image: {
-            type: 'varchar'
-        },
-        userId: {
             type: 'varchar'
         },
         positionId: {
