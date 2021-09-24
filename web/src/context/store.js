@@ -5,7 +5,8 @@ import actions from './actions'
 
 const store = createStore({
    state: {
-      videoLesson: null
+      videoLesson: null,
+      api: 'http://localhost:3002'
    },
    mutations,
    actions

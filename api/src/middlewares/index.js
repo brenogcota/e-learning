@@ -1,7 +1,7 @@
 const userValidator = require('./user-validator');
-
 const authMiddleware = require('./auth');
 const { isAdmin } = require('./permissions');
+const multer = require('./multer');
 
 const notFound = (req, res, next) => {
     res.status(404);
@@ -23,5 +23,6 @@ module.exports = {
     errorHandler,
     userValidator,
     authMiddleware,
-    isAdmin
+    isAdmin,
+    multer
 }

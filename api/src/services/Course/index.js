@@ -6,6 +6,18 @@ const Course = require('../../entity/Course');
 const slugfy = require('../../utils/slugfy');
 const logger = require('../../infra/logger');
 
+const index = async (req, res, next) => {
+    try {
+        const courseRepository = getRepository(Course);
+        let courses = await courseRepository.find({ relations: ['user']});
+        if(!courses) return res.status(404).json([]);
+
+        res.status(200).json(courses);
+    } catch (err) {
+        next(err)
+    }
+}
+
 const show = async (req, res, next) => {
     try {
         const courseRepository = getRepository(Course);
@@ -54,6 +66,7 @@ const create = async (req, res, next) => {
 }
 
 module.exports = {
+    index,
     show,
     create
 }

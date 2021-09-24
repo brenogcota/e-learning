@@ -18,7 +18,8 @@ app.use(express.json());
 app.use(morgan('dev'));
 app.use(helmet());
 
-const port = process.env.PORT || 3001;
+app.use('/uploads', express.static(__dirname + '/public/uploads'));
+//app.use('/assets', express.static(__dirname + '/public/assets'));
 
 const corsOptions = {
     origin: `http://localhost:8080`,

@@ -56,14 +56,20 @@
         <div class="py-3 px-6 mt-4" :class="isActive('doubts') ? 'block' : 'hidden'">Dúvidas</div>
         <div class="py-3 px-6 mt-4" :class="isActive('comments') ? 'block' : 'hidden'">Comentários</div>
 
+
+        <Footer />
     </section>
 
 </template>
 
 <script>
+import Footer from './Footer.vue'
 
 export default {
   name: 'Lesson',
+  components: {
+    Footer
+  },
   data() {
       return {
           tabActive: 'overview'
